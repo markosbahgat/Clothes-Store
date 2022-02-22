@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
-}
+@import '~mdb-ui-kit/css/mdb.min.css';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
   }
+
+.dropdown-toggle:focus ~ .dropdown-menu{
+    display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.dropdown-menu .dropdown-item{
+    padding: 5px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.fas, .far{
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.container {
+    margin-top: 200px
+}
+
+.title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden
+}
+
+.content .content-overlay {
+    background: linear-gradient(45deg,rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.5) 100%);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s
+}
+
+.content:hover .content-overlay {
+    opacity: 1
+}
+
+.content-image {
+    width: 100%
+}
+
+img {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s
+}
+
+.content:hover .content-details {
+    top: 45%;
+    left:30%;
+    opacity: 1
+}
+
+.content-details h3 {
+    color: rgba(255, 255, 255, 0.849);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 0.8em
+}
+
+.fadeIn-bottom {
+    top: 80%
+}
+
+
+.h111{
+    top: 29.5%;
+    left:12%;
+    position: absolute;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+
+
+
+
+.bg-image{
+    width:15%;
+    cursor: pointer;
+}
+
+.text-center{
+    background-color:rgba(0, 0, 0, 0.);
+}
+#loadmorebutton{
+    background-color:rgba(0, 0, 0, 0.1);
+    color:black;
+    border: none;
+    font-size: 20px;
+    padding: 10px 10px;
+    font-family: "Poppins";
+
+}
+#loadmorebutton:hover{
+    background-color:#212529;
+    color:white;
+}
+
+
+#navbartop{
+    position:absolute;
+    z-index: 1000;
+    border: none;
+    box-shadow: none;
+}
+
+.Title{
+    font-family:"Poppins";
+    
+}
+.Title:hover{
+    color:rgba(57, 14, 214, 0.699);
+}
+
+.fa-heart:hover{
+    color:rgba(57, 14, 214, 0.699);
+}
+
+.w-100{
+    margin-bottom:30px ;
+}
+
+
+
+.MainForm{
+    width:30%;
+    margin: auto;
+    margin-top: 15vw;
+    height:auto;
+}
+
+
+
+.animate__animated.animate__rollIn {
+    --animate-duration: 2s;
+    --animate-delay: 0.94s;
   }
-  to {
-    transform: rotate(360deg);
+
+  .animate__animated.animate__lightSpeedInRight {
+    --animate-delay: 0.9s;
+    --animate-duration: 2s;
   }
-}
+  .animate__animated.animate__bounceInUp{
+    --animate-duration: 6s;
+
+  }
+
+
+
+  .btn-light{
+      display: none;
+      position: absolute;
+      margin-top: -6%;
+      margin-left: 6%;
+      font-size: 1.1vw;  
+      font-family: "Poppins";
+      border-radius: 15px;
+      padding: 5px 15px;
+      background-color: #fff;
+      color: #1a1a1a;
+  }
+
+  
+
+
+  .bg-image:hover ~ .btn-light{
+      display: block
+      
+      
+  }
+
+
+  .modal-dialog{
+      display: none;
+  }
+  .btn-light:focus ~ .modal-dialog{
+      display: block;
+  }
